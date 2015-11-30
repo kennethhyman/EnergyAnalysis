@@ -2,13 +2,13 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
   def setup
-    @base_title = " | 2015 Lit Project"
+    @base_title = "2015 Lit Project"
   end
 
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", full_title("Home")
+    assert_select "title", full_title
   end
 
   test "should get about" do
@@ -23,7 +23,11 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", full_title("Bibliography")
   end
   private
-  def full_title(title)
-    title + @base_title
+  def full_title(title = '')
+    if title.empty?
+      @base_title
+    else
+      title + " | " + @base_title
+    end
   end
 end
