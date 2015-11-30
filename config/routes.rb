@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  get '/home' => 'static_pages#home'
 
-  get 'static_pages/about'
+  get '/about' => 'static_pages#about'
 
-  get 'static_pages/bibliography'
+  get '/bibliography' => 'static_pages#bibliography'
 
  root 'static_pages#home'
 end
