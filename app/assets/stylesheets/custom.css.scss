@@ -84,18 +84,20 @@ footer {
   }
 }
 
+
+/*Biblioraphy styling */
 .bibliography{
   h1{
     font-size: 1.7em;
   }
-  h2{
-    border-top: 2px solid #e2e2e2;
-    border-left: 2px solid #e2e2e2;
-    border-right: 2px solid #e2e2e2;
-  }
   p{
     font-size: 1.1em;
-    border-left: 2px solid #e2e2e2;
-    border-right: 2px solid #e2e2e2;
   }
+}
+.source{
+  border-top: 2px solid #e2e2e2;
+  border-left: 2px solid #e2e2e2;
+  border-right: 2px solid #e2e2e2;
+  border-bottom: 2px solid #e2e2e2;
+  margin-bottom: 2em;
 }

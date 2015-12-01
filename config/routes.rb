@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   get '/bibliography' => 'static_pages#bibliography'
 
+  get '/conclusion' => 'static_pages#conclusion'
+
  root 'static_pages#home'
 end

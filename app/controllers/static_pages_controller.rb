@@ -7,4 +7,6 @@ class StaticPagesController < ApplicationController
 
   def bibliography
   end
+  def conclusion
+  end
 end
