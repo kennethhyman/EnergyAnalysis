@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def about
+  def future_study
   end
 
   def bibliography

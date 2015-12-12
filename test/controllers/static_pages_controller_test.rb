@@ -11,10 +11,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", full_title
   end
 
-  test "should get about" do
-    get :about
+  test "should get future study" do
+    get :future_study
     assert_response :success
-    assert_select "title", full_title("About")
+    assert_select "title", full_title("Future Study")
   end
 
   test "should get bibliography" do

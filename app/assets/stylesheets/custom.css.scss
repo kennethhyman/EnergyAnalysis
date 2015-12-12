@@ -109,3 +109,47 @@ footer {
     list-style-position: inside;
   }
 }
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+.debug_dump{
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/*countries styling*/
+
+.countries{
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+}
+.energy-stat{
+  margin-top: 45px;
+  h2{
+    font-size: 1.7em;
+    margin-bottom: 15px;
+  }
+}
+
+.jumbotron.index{
+  background-image:url("http://luuly1979.files.wordpress.com/2011/03/world-map-background-390622.jpg");
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1{
+  padding-top: 25px;
+  color: #000;
+  }
+}
