@@ -11,10 +11,17 @@ Rails.application.routes.draw do
 
   get '/conclusion' => 'static_pages#conclusion'
 
+  
+  get 'static_pages/total_x_gdp_graph' => 'static_pages#total_x_gdp_graph'
+  get 'static_pages/total_x_imr_graph' => 'static_pages#total_x_imr_graph'
+  get 'static_pages/percent_x_gdp_graph' => 'static_pages#percent_x_gdp_graph'
+  get 'static_pages/percent_x_imr_graph' => 'static_pages#percent_x_imr_graph'
+
   get 'countries/total_x_gdp_graph/:country(.:format)' => 'countries#total_x_gdp_graph'
   get 'countries/total_x_imr_graph/:country(.:format)' => 'countries#total_x_imr_graph'
   get 'countries/percent_x_gdp_graph/:country(.:format)' => 'countries#percent_x_gdp_graph'
   get 'countries/percent_x_imr_graph/:country(.:format)' => 'countries#percent_x_imr_graph'
+
 
   resources :countries
 

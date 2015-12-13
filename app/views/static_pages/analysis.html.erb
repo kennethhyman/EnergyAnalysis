@@ -1,1 +1,48 @@
-<h1>Analysis</h1>
+<div class="container">
+	<h1>Analysis</h1>
+	<div class = "center">
+		<h2>Methods</h2>
+		<p>In order to collect such a massive amount of information to analyze, I created a specific type of program called a web-scraper in order to extract the information I am displaying from many different sources on the web. I then seeded this data into a database, and am using that database in order to dynamically graph the information on each page.</p>
+		<p>I chose GDP per capita and infant mortality rate to represent development for the purposes of this analysis because I believe between the two statistics, they represent social, educational, economic, and even potentially governmental development. In the future, I hope to also include literacy rate as a better representation of educational development, however, due to time constraints, GDP per capita and IMR will suffice.</p>
+		<h2>Unexpected Turns</h2>
+		<p>I feel that this is a very important section to include as I personally believe you haven't done enough research if something hasn't surprised you yet. With this research, I went through a couple different phases. Initially, I thought the correlation I would find with the data I was collecting would be so obvious that this tool wouldn't actually in fact serve any purpose. In this stage I thought That more income would obviously correlat to more renewable energy. For whatever naive reason, I expected countries that were thriving economically would take some of their money and invest back in the industries that helped get them that far, and at least a portion of that money would go towards the development of greener technology. Regardless of whether or not money is being invested in greener technology, the correlation I was expecting didn't hold up.</p>
+		<p>The next phase I went through was after I graphed the first set of data that I collected. Initially, I saw no correlation. At that point, I thought that this tool would again be useless, but not because the correlation was too ovbious, but because the correlation just simply didn't exist. For a while I actually thought the lack of trending was from a horrible calculation/graphing error, or even worse, a mistake made when gathering the information. As it turned out, there was actually an error, but it only had to do with the scaling and sizing of the graphs. Basically, most of the data wasn't actually being plotted because it was so far out of the scale of the graph. After a few changes to the code used to generate the graphs, I reached the final stage.</p>
+		<p>The final stage I reached was that there was definitely correlation in the graphs. The correlation that is present, however, is pretty loose. I attribute that to the fact that these are very general statistics to try to represent development. I do believe that the conclusions I am going to discuss in the next section hold quite a bit of merit simply because even though there are many factors that show a country's development, GDP per capita and infant mortality rate are indisputably a large part it. Because a visable trend does exist despite only analyzing these two statistics, I believe there must be an even stronger trend that will become more and more apparent as I analyze more developmental traits.</p>
+		<h2>The Trends<h2>
+		<p>The trends that I see vary in strength and are only based off of the data <%= link_to "gathered from a few sites", bibliography_path%> and may therefore vary in accuracy.</p>
+		<div class="container">
+			<div class="col-md-6">
+				<%= image_tag url_for(:controller => "static_pages", :action => "total_x_gdp_graph")%>
+			</div>
+			<div class="col-md-6">
+				<%= image_tag url_for(:controller => "static_pages", :action => "total_x_imr_graph") %>
+			</div>
+		</div>
+		<div class="container analysis">
+			<div class="col-md-6">
+				<p>The first graph I analyzed was this graph of total renewable energy compared to GDP per capita. This graph shows a pretty apparent posative correlation between the two, with increasing GDP per capita presumably being the cause for increased  use of renewable energy sources as opposed to the other way around. This trend is pretty one of the stronger correlations we will see of this data. Throughout the graph, I think it is important to note that there is always a pretty consistent ground line for little to no renewable energy, but as the GDP per capita gets bigger, there are far more varying amounts of renewable energy used. Interestingly enough, China is a pretty big outlier here and may actually be responsible for making the trend look stronger than it actually is.</p>
+			</div>
+			<div class="col-md-6">
+				<p>With this graph, I was looking for a trend between education and use of renewable energy used. I decided IMR would be a fair measurement of education in this case due to the fact that as there are technilogical advancements, and therefore an increase in education, there are fewer deaths of young children. This chart also showed some a very promising trend exactly how I anticipated it to be, where the more educationally advanced a country was, the more renewable energy they would use. This data set has a couple of outliers, but most notably Brazil.</p>
+			</div>
+		</div>
+	<div class="container analysis">
+		<div class="col-md-6">
+			<%= image_tag url_for(:controller => "static_pages", :action => "percent_x_gdp_graph") %>
+		</div>
+		<div class="col-md-6"
+			<%= image_tag url_for(:controller => "static_pages", :action => "percent_x_imr_graph")%>
+			<%= image_tag url_for(:controller => "static_pages", :action => "percent_x_imr_graph")%>
+		</div>
+		<div class="col-md-6 analysis">
+			<p>To me, the data I was analyzing started to surprise me here. As you can see, as far as looking at what percentage of a country's energy usage was green, the lower the GDP per capita was, the larger a percent was green. This negative correlation shocked me, but did actually make sense after reading <%= link_to "an article", "https://ypte.org.uk/factsheets/renewable-energy/fossil-fuels-non-renewable"%> about the world's use of renewable energy. Basically, this article states that these old school carbon based energy sources were integral to the development of many of the world's biggest super powers. These country's, including the United States, an much of Europe, couldn't have developed nearly as quickly as they had without the use of carbon based energy sources and counries that develop this way end up setting up a lot of infrastructure dependent on these resources.</p>
+		</div>
+		<div  class="col-md-6">
+			<p>This graph is very interesting to me as the trend does exist, there is a very slight negative correlation, however, it is not nearly as strong as I expected. I assumed, that this correlation would be the strongest of all of the graphs, however I believe  that because infant mortality rate is probably just as representative of social and educational development as it is of economic development this trend does actually make sense. As shown by the graph to the left, as economic development increases, the percentage of green energy actually decreases, and that is almost enough to convince me that IMR may actually be too representative of economic development to show the correlation I was expecting from social and educational development.</p>
+		</div>
+	</div>
+	<div class="center"
+		<h2>Conclusions</h2>
+		<p>In the end, I strongly do believe that there is a lot of correlation between the development of counries and their use of renewable energy. It is clear that although more developed countries, specifically economically developed, use more renewable energy than their less developed counter parts, they are also using far more energy all together. Most of the energy these countries are using is nuclear energy, which although better than carbon based fuels, is still not an unlimited resource. I believe that in order for us to save our planet, the global super powers need to invest far more in renewable energy. We as a world do have the ability to convert fully to renewable energy sources, but it is the most developed nations that are standing in the way.</p>
+	</div>
+</div>

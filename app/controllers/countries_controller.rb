@@ -124,7 +124,7 @@ class CountriesController < ApplicationController
     @xInput = []
     @yInput = []
     graph = Gruff::Scatter.new(400)
-    graph.title = "Total Renewable vs GDP per capita" 
+    graph.title = "Total Renewable vs Infant Mortality Rate" 
     graph.theme_greyscale
     graph.x_axis_label = "Infant Mortality Rate (per 1000)"
     graph.y_axis_label = "Total Renewable (GWh/year)"
