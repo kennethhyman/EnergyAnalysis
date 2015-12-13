@@ -1,0 +1,11 @@
+<% provide(:title, "Countries") %>
+<div class="jumbotron index">
+	<h1> Countries </h1>
+</div>
+<ul class="countries">
+<% @countries.each do |country|%>
+	<li><%= link_to country.name, country %></li>
+<% end %>
+</ul>
+<div class="center"><%= will_paginate%></div>
+

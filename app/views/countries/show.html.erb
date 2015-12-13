@@ -1,0 +1,58 @@
+<div class="energy-stat center jumbotron">
+	<div class="container">
+		<h1><%=@country.name%></h1>
+		<h2>Energy Statistics </h2>
+
+		<div class="row col-md-6">
+			<p>Total Renewable: <%= is_listed?(@country.total_renewable, "TWh/year") %></p>
+			<p>Wind Power: <%= is_listed?(@country.wind_power) %> </p>
+			<p>Biomass & waste: <%= is_listed?(@country.biomass) %></p>
+			<p>Geothermal Power: <%= is_listed?(@country.geothermal)%></p>
+		</div>
+	
+		<div class="row col-md-6">
+			<p>Percentage of total generation: <%= is_listed?(@country.percent_total, "%") %></p>
+			<p>Solar Power: <%= is_listed?(@country.solar_power) %></p>
+			<p>Hydro Power: <%= is_listed?(@country.hydro_power) %> </p>
+		</div>
+	</div>
+	<div class = "container">
+		<h2>Development Statistics</h2>
+
+		<div class="row col-md-6">
+			<p>GDP (USD): <%= is_listed?(@country.gdp, "$") %></p>
+			<p>GDP per capita: <%= is_listed?(@country.gdp_per_capita, "$") %> </p>
+			<p>Literacy Rate: Coming soon</p>
+		</div>
+	
+		<div class="row col-md-6">
+			<p>Infant Mortality Rate: <%= is_listed?(@country.imr, "per 1000") %></p>
+			<p>Region: <%= is_listed?(@country.region, "") %></p>
+		</div>
+	</div>
+	<h2> Suggestions for new statistics to add? </h2>
+	<p>Contact me at kenneth.hyman@gmail.com</p>
+</div>
+<h1> Graphs </h1>
+<div class="center">
+<p> Note, for scaling purposes, only 50 randomly selected countries will be graphed alongside the country selected. Also note, that if country has more than 100,000 GWh/year generated, it is capped at 100,000</p>
+</div>
+<div class="container">
+	<div class="col-md-6 left">
+	<%= image_tag url_for(:controller => "countries", :action => "total_x_gdp_graph", :country => @country) %>
+	</div>
+	<div class="col-md-6 right">
+	<%= image_tag url_for(:controller => "countries", :action => "total_x_imr_graph", :country => @country) %>
+	</div>
+	<div class="col-md-6 left">
+	<%= image_tag url_for(:controller => "countries", :action => "percent_x_gdp_graph", :country => @country) %>
+	</div>
+	<div class="col-md-6 right">
+	<%= image_tag url_for(:controller => "countries", :action => "percent_x_imr_graph", :country => @country) %>
+	</div>
+</div>
+
+<%unless @country.analysis.nil?%>
+	<h1>Quick Analysis</h1>
+<%end%>
+<%= @country.analysis %>
