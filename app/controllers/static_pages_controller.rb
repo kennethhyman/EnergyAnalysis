@@ -9,4 +9,7 @@ class StaticPagesController < ApplicationController
   end
   def conclusion
   end
+  def analysis
+  	@countries = Country.all
+  end
 end

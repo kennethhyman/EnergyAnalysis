@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Country.create(name: 'Afghanistan',   imr: 27.69,  gdp: 20444,  gdp_per_capita: 1946,  total_renewable: 0.710,  hydro_power: 710, percent_total: 80.32,  region: 'Asia')
+Country.create(name: 'Afghanistan',   imr: 27.69,  gdp: 20444,  gdp_per_capita: 1946,  total_renewable: 0.710,  hydro_power: 710, percent_total: 80.32,  region: 'Asia',
+				analysis: "Afghanistan is one of the less developed countries socially, educationally, and economically, as can be seen through their GDP per capita, literacy rate, and gender gap. The crude oil and natural gas that Afghanistan uses is all imported from nearby oil producing nations. It appears that even though they have very little oil being generated, their location makes these forms of energy very cheap and accessible which may possibly discouraging the use of more renewable sources, hence the lack of information on their use of such.")
 
 
 Country.create(name: 'Albania',   imr: 27.69,  gdp: 13276,  gdp_per_capita: 9931,  total_renewable: 4.245,  hydro_power: 4245,      percent_total: 99.98,  region: 'Europe')
